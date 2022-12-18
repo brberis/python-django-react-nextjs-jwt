@@ -13,20 +13,20 @@ This repository contains a sample project that demonstrates how to use Django as
 
 Set your virtual environment and Install requirements: 
 <br />
-`
+```
 pip install -r requirements/base.txt
 python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver 4001
-`
+```
 <br />
 <br />
 In /www 
 <br />
-`
+```
 npm install
 npm run dev
-`
+```
 
 <br />
 <br />
