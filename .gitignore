@@ -5,6 +5,6 @@
 db.sqlite3
 *.pyc
 /staticfiles
-#frontend
-www/node_modules
-www/.next
+#client
+client/node_modules
+client/.next

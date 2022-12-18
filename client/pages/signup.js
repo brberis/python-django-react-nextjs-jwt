@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { register } from '../actions/auth';
-import Layout from '../hocs/Layout';
-import Loader from 'react-loader-spinner';
+import Layout from "../components/Layout";
 import { useRouter } from 'next/router';
 
 const Signup = () => {
@@ -113,13 +112,8 @@ const Signup = () => {
             minLength={8}
           />
         </div>
-        {loading ? (
-          <div>
-            <Loader type='Oval' color='#00bfff' width={50} height={50} />
-          </div>
-        ) : (
-          <button type='submit'>Sign Up</button>
-        )}
+        <button type='submit'>Sign Up</button>
+
       </form>
     </Layout>
   );

@@ -12,8 +12,7 @@ const navigation = [
   { name: 'Global Menu', href: '/#', current: false },
 ]
 const authNavigation = [
-  { name: 'Profile', href: '/me', current: false },
-  { name: 'Logout', href: '/logout', current: false },
+  { name: 'Private Menu', href: '/#', current: false },
 ]
 
 

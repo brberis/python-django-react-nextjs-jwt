@@ -14,8 +14,8 @@ const Dashboard = () => {
 
   return (
     <Layout>
-      <h1>User Dashboard</h1>
-      <p>Welcome {user !== null && user.first_name} to the dash.</p>
+      <h1>Dashboard</h1>
+      <p>Welcome {user !== null && user.username}!</p>
     </Layout>
 
   );
