@@ -46,7 +46,5 @@ Create front and backend .env files.
 
 Please send your questions [here](mailto:cristobal@barberis.com?subject=[GitHub]%20python-django-react-nextjs-jwt) or visit [github/brberis](https://github.com/brberis).
 
-## Credits
 
-* Cristobal A Barberis
 
