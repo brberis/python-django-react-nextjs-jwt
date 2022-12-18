@@ -9,12 +9,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../actions/auth';
 
 const navigation = [
-  { name: 'Ping', href: '/ping', current: false },
+  { name: 'Global Menu', href: '/#', current: false },
 ]
 const authNavigation = [
-  { name: 'Inventory', href: '/inventory', current: false },
-  { name: 'Calendar', href: '/calendar', current: false },
-  { name: 'Recipes', href: '/recipes', current: false },
   { name: 'Profile', href: '/me', current: false },
   { name: 'Logout', href: '/logout', current: false },
 ]

@@ -3,7 +3,7 @@ import os
 import environ
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 env = environ.Env(
@@ -11,16 +11,10 @@ env = environ.Env(
 )
 IGNORE_DOT_ENV_FILE = env.bool("IGNORE_DOT_ENV_FILE", default=False)
 if not IGNORE_DOT_ENV_FILE:
-    # reading .env file
     environ.Env.read_env(env_file=os.path.join(BASE_DIR, ".env"))
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env("SECRET_KEY")
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG")
 ON_SERVER = env("ON_SERVER", default=True)
 
@@ -50,18 +44,12 @@ THIRD_PARTY_APPS = [
     "rest_framework",
     'rest_framework_simplejwt.token_blacklist'
 ]
-OUR_APPS = [
+APPS = [
     "api",
-    'app.products',
-    'app.events',
-    'app.billing',
-    'app.services',
-    'app.inventory',
     'app.contacts',
-    'app.signpage',
-    'app.production'
 ]
-INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + OUR_APPS
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -102,15 +90,9 @@ TEMPLATES = [
 WSGI_APPLICATION = "app.wsgi.application"
 
 
-# Database
-# https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
 DATABASES = {
     "default": env.db(),
 }
-
-# Password validation
-# https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
 password_validators = [
     "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
@@ -120,9 +102,6 @@ password_validators = [
 ]
 AUTH_PASSWORD_VALIDATORS = [{"NAME": v} for v in password_validators]
 AUTH_USER_MODEL = "api.User"
-
-# Internationalization
-# https://docs.djangoproject.com/en/2.0/topics/i18n/
 
 LANGUAGE_CODE = "en-us"
 
@@ -134,9 +113,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATIC_URL = "/static/"
@@ -183,9 +159,6 @@ LOGGING = {
 }
 
 REST_FRAMEWORK = {
-    # 'DEFAULT_PERMISSION_CLASSES': [
-    # 'rest_framework.permissions.IsAuthenticated'
-    # ],
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework_simplejwt.authentication.JWTAuthentication",
         "rest_framework.authentication.BasicAuthentication",

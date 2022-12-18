@@ -15,7 +15,7 @@ const Dashboard = () => {
   return (
     <Layout>
       <h1>User Dashboard</h1>
-      <p>Welcome {user !== null && user.first_name} to the httpOnly</p>
+      <p>Welcome {user !== null && user.first_name} to the dash.</p>
     </Layout>
 
   );

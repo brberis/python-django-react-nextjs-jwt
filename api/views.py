@@ -18,13 +18,6 @@ class Profile(generics.RetrieveAPIView):
         return self.request.user
 
 
-class Ping(generics.GenericAPIView):
-    permission_classes = (IsAuthenticated,)
-
-    def get(self, *args, **kwargs):
-        return Response({'now': timezone.now().isoformat()})
-
-
 class RegisterView(APIView):
     permission_classes = (permissions.AllowAny,)
 
