@@ -33,8 +33,21 @@ $ npm run dev
 <br />
 Create front and backend .env files.
 
-
 ## Features
+
+- JSON Web Token (JWT) authentication and authorization
+- Django server serving as a REST API and JWT issuer/verifier
+- Next.js frontend consuming the API and using JWT for authentication/authorization
+- User registration and login functionality
+- Secure password hashing and storage
+- REST API endpoints for retrieving and updating data
+- Server-side rendering with Next.js
+- Option to use database such as PostgreSQL or MySQL
+- Functionality to build and deploy the project to production.
+- Option for adding additional libraries, frameworks and technologies for development
+- Able to be used as a starting point for building full-stack web applications with Django and Next.js.
+
+## Technology
 
 - Django 4.1.4
 - React v18
