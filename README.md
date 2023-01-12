@@ -9,6 +9,14 @@
 
 This repository contains a sample project that demonstrates how to use Django as the backend for a Next.js app, with JSON Web Tokens (JWT) for authentication. The project includes a Django server that serves a REST API and a Next.js frontend that consumes the API. The frontend uses JWT for authentication and authorization, with the Django server serving as the JWT issuer and verifier. This project can be used as a starting point for building full-stack web applications with Django and Next.js.
 
+## User Story
+
+As a developer, I want a starting point code to develop a full-stack web application using Django and Next.js, so that I can efficiently create advanced and dynamic web applications with ease.
+
+This repository contains a sample project that provides a starting point for developers who wish to build a full-stack web application using Django and Next.js. It demonstrates how to use Django as the backend and Next.js as the frontend, with JSON Web Tokens (JWT) for authentication. The project includes a Django server that serves a REST API and a Next.js frontend that consumes the API. The frontend uses JWT for authentication and authorization, with the Django server serving as the JWT issuer and verifier.
+
+By using this project as a starting point, I can save development time by having a structured codebase and can easily build on top of it, to create advanced and dynamic web applications with ease.
+
 ## Installation
 
 Set your virtual environment and Install requirements: 
